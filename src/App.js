@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { BrowserRouter,Route,Switch } from 'react-router-dom';
 import NavBar from './components/layout/NavBar'
 import Pane from "./components/data/pane"
+import AddItem from "./components/data/AddItem"
 class App extends Component {
   render() {
     return (
@@ -15,6 +16,7 @@ class App extends Component {
           <Route path="/books" render={(props) => <Pane {...props} pathV="http://192.168.102.16:8080/list/books"/>}/>
           <Route path="/ja" render={(props) => <Pane {...props} pathV="http://192.168.102.16:8080/list/articles"/>}/>
           <Route path="/sites" render={(props) => <Pane {...props} pathV="http://192.168.102.16:8080/list/sites"/>}/>
+          <Route path="/add" component={AddItem} />
         </Switch>
       </div>
       </BrowserRouter>

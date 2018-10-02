@@ -19,7 +19,7 @@ class Pane extends React.Component{
   }
   getData = function(path)
   {
-    fetch(this.state.path ? this.state.path: path).then(
+    fetch(path).then(
           results => {
             return results.json();
           }
@@ -34,12 +34,12 @@ class Pane extends React.Component{
           this.setState({items:items});
         })}
   componentDidMount(){
-    this.setState({path:this.props.pathV});
     this.getData(this.props.pathV);
-    this.interval = setInterval(() => this.getData(),5000);
+    this.interval = setInterval(() => this.getData(this.props.pathV),5000);
   }
   componentWillUnmount()
   {
+    this.setState({items:[]})
     clearInterval(this.interval)
   }
 

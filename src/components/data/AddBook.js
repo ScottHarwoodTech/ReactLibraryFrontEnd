@@ -9,7 +9,7 @@ class AddBook extends React.Component{
       'author':{'name':e.target.author.value},
       'title':e.target.title.value,
       'publishedDate': new Date(e.target.date.value).getTime()/1000,
-      'type': "scott.harwood.library.system.article",
+      'type': "scott.harwood.library.system.book",
       'edition':e.target.edition.value,
       "Publisher":{'name':e.target.publisher.value}
     }

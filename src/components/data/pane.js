@@ -24,7 +24,6 @@ class Pane extends React.Component{
             return results.json();
           }
         ).then(data =>{
-          console.log(data)
           let items = data.map((item) => {
             return <Item key={guid()} type = {item.type} author={item.author.name}
                     date={item.publishedDate} ToA = {item.ToA}

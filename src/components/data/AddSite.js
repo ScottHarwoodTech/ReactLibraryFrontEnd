@@ -9,7 +9,7 @@ class AddSite extends React.Component{
       'author':{'name':e.target.author.value},
       'title':e.target.title.value,
       'publishedDate': new Date(e.target.date.value).getTime()/1000,
-      'type': "scott.harwood.library.system.article",
+      'type': "scott.harwood.library.system.site",
       'url':e.target.url.value,
       "dOA":new Date(e.target.dateOfAccess.value).getTime()/1000
     }

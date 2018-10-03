@@ -10,8 +10,8 @@ class App extends Component {
       <div className="App">
         <NavBar />
         <Switch>
-          <Route exact path = "/" render = {(props) => (<div><Pane {...props} pathV="http://192.168.102.16:8080/list/books"/>,
-          <Pane {...props} pathV="http://192.168.102.16:8080/list/articles"/>,
+          <Route exact path = "/" render = {(props) => (<div><Pane {...props} pathV="http://192.168.102.16:8080/list/books"/>
+          <Pane {...props} pathV="http://192.168.102.16:8080/list/articles"/>
           <Pane {...props} pathV="http://192.168.102.16:8080/list/sites"/></div>)} />
           <Route path="/books" render={(props) => <Pane {...props} pathV="http://192.168.102.16:8080/list/books"/>}/>
           <Route path="/ja" render={(props) => <Pane {...props} pathV="http://192.168.102.16:8080/list/articles"/>}/>

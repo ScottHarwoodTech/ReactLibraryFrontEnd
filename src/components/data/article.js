@@ -7,7 +7,7 @@ class Article extends React.Component
   {
     return (
       <div>
-        <div class = "row">
+        <div className = "row">
           <div className = "col s4">{this.props.value.author}</div>
           <div className = "col s4">{this.props.value.title} </div>
           <div className = "col s2">{this.props.value.issue} </div>

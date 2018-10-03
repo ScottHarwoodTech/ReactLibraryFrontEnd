@@ -14,7 +14,7 @@ function s4() {
 
 class Pane extends React.Component{
   state = {
-    items:"",
+    items:[],
     path:""
   }
   getData = function(path)
@@ -24,10 +24,11 @@ class Pane extends React.Component{
             return results.json();
           }
         ).then(data =>{
+          console.log(data)
           let items = data.map((item) => {
             return <Item key={guid()} type = {item.type} author={item.author.name}
                     date={item.publishedDate} ToA = {item.ToA}
-                    title = {item.title} publisher = {item.Publisher.name}
+                    title = {item.title} publisher = {item.Publisher? item.Publisher.name : ""}
                     issue= {item.issue} edition={item.edition} pages={item.pages}
                     url={item.url} DoA = {item.DoA} />;
           })
